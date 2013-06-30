@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="aboutText1" xml:space="preserve">
+    <value>Hello!
+
+I'm Tim, a French engineering student.
+I made this app in a weekend for a class project
+and I hope you enjoy it :)
+
+For any question / remark / bug report, feel
+free to contact me by email:</value>
+  </data>
+  <data name="aboutText2" xml:space="preserve">
+    <value>I plan to release an update soon, including 
+worldwide ranking and Facebook sharing.
+
+Also, if you have any improvement ideas, tell me! </value>
+  </data>
+  <data name="aboutText3" xml:space="preserve">
+    <value>PS: By the way, I'm actually looking for
+an internship in back-end web development.
+You know how to find me... ;)</value>
+  </data>
+  <data name="appName" xml:space="preserve">
+    <value>RunToScore</value>
+  </data>
+  <data name="avgVitesse_before" xml:space="preserve">
+    <value>Your avg. speed is</value>
+  </data>
+  <data name="clickToStart" xml:space="preserve">
+    <value>Click to start</value>
+  </data>
+  <data name="distance_before" xml:space="preserve">
+    <value>You ran</value>
+  </data>
+  <data name="duration_before" xml:space="preserve">
+    <value>You ran for</value>
+  </data>
+  <data name="history" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="kCal_before" xml:space="preserve">
+    <value>You lost around</value>
+  </data>
+  <data name="kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="km" xml:space="preserve">
+    <value>Km</value>
+  </data>
+  <data name="mainPanorama1" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="mainPanorama2" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="mainPanorama3" xml:space="preserve">
+    <value>Ranking</value>
+  </data>
+  <data name="miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="minutes" xml:space="preserve">
+    <value>minutes</value>
+  </data>
+  <data name="modeGPS" xml:space="preserve">
+    <value>Allow GPS</value>
+  </data>
+  <data name="modeLock" xml:space="preserve">
+    <value>Run under lock screen</value>
+  </data>
+  <data name="modeTown" xml:space="preserve">
+    <value>Town mode</value>
+  </data>
+  <data name="modeTownExplain" xml:space="preserve">
+    <value>With town mode, pins on map are placed
+on streets rather than randomly.
+This use your data.</value>
+  </data>
+  <data name="nbRun_before" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="nbRun_unit" xml:space="preserve">
+    <value>run</value>
+  </data>
+  <data name="newRun" xml:space="preserve">
+    <value>New Run</value>
+  </data>
+  <data name="noRunYet" xml:space="preserve">
+    <value>You didn't run ... Yet</value>
+  </data>
+  <data name="points" xml:space="preserve">
+    <value>points</value>
+  </data>
+  <data name="points_before" xml:space="preserve">
+    <value>You won</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="textRankingWait" xml:space="preserve">
+    <value>Sorry, ranking is not yet available...
+But it'll come soon in an update.
+
+Stay tuned ;)</value>
+  </data>
+  <data name="titleMetric" xml:space="preserve">
+    <value>Metric system</value>
+  </data>
+  <data name="youHave" xml:space="preserve">
+    <value>You have</value>
+  </data>
+  <data name="youRan" xml:space="preserve">
+    <value>You ran</value>
+  </data>
+  <data name="youRanFor" xml:space="preserve">
+    <value>you ran for</value>
+  </data>
+  <data name="AllowGPS" xml:space="preserve">
+    <value>Allow GPS?</value>
+  </data>
+  <data name="AllowGPSText" xml:space="preserve">
+    <value>To use this app you need to allow GPS usage. We do not use your GPS data on other purpose that recording your exercise tracking data. For more informations, you can read the privacy policy in the settings page.</value>
+  </data>
+  <data name="PrivacyPolicyText" xml:space="preserve">
+    <value>Your privacy is important.
+This application uses your location to measure
+your performance and track your route during
+your exercise.
+Your location data is not published and is only
+stored on your phone so you can have access to
+history.
+You may disable Location Services from
+RuntoScore settings section.
+
+If you have any question, feel free to ask at
+RunToScore@gmail.com</value>
+  </data>
+  <data name="StopReccordings" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="StopReccordingsText" xml:space="preserve">
+    <value>You are about to stop reccordings. Continue?</value>
+  </data>
+  <data name="PleaseAllowGPS" xml:space="preserve">
+    <value>Please Allow GPS</value>
+  </data>
+  <data name="PrivacyPolicyTitle" xml:space="preserve">
+    <value>Privacy</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareByMail" xml:space="preserve">
+    <value>Share by Mail</value>
+  </data>
+  <data name="ShareByMessage" xml:space="preserve">
+    <value>Share by Message</value>
+  </data>
+  <data name="ShareBySkyDrive" xml:space="preserve">
+    <value>Share on SkyDrive</value>
+  </data>
+  <data name="ShareMailSubject" xml:space="preserve">
+    <value>Hi, look at my last run</value>
+  </data>
+  <data name="ShareOnFB" xml:space="preserve">
+    <value>Share to your friends</value>
+  </data>
+</root>

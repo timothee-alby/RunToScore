@@ -1,0 +1,67 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="RunToScore.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolbox="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=LocalizedResources.appName, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="{Binding Path=LocalizedResources.settings, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel> 
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <RadioButton Content="{Binding Path=LocalizedResources.miles, Source={StaticResource LocalizedStrings}}" Height="72" HorizontalAlignment="Left" Margin="12,302,0,0" Name="radioButtonMiles" VerticalAlignment="Top" Width="210" Checked="radioButtonMiles_Checked"/>
+            <RadioButton Content="{Binding Path=LocalizedResources.kilometers, Source={StaticResource LocalizedStrings}}" Height="72" HorizontalAlignment="Left" Margin="216,302,0,0" Name="radioButtonKilometers" VerticalAlignment="Top" Checked="radioButtonKilometers_Checked"/>
+            <TextBlock Height="86" HorizontalAlignment="Left" Margin="22,489,0,0" Name="textBlock1" Text="{Binding Path=LocalizedResources.modeTownExplain, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="396" Foreground="#999999" />
+            <TextBlock Foreground="#999999" Name="textBlock2" Text="{Binding Path=LocalizedResources.titleMetric, Source={StaticResource LocalizedStrings}}" Margin="22,276,34,298" />
+            <HyperlinkButton Content="{Binding Path=LocalizedResources.PrivacyPolicy, Source={StaticResource LocalizedStrings}}" Height="30" HorizontalAlignment="Left" Margin="6,107,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Width="258" FontSize="20" Foreground="#999999" NavigateUri="/PrivacyPolicy.xaml" />
+        </Grid>
+        <StackPanel Height="101" HorizontalAlignment="Left" Margin="21,0,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="447" Grid.Row="1">
+            <toolbox:ToggleSwitch x:Name="FluxToggleGPS"
+                          Header="{Binding Path=LocalizedResources.modeGPS, Source={StaticResource LocalizedStrings}}" 
+                          Checked="FluxToggleGPS_Checked" 
+                          Unchecked="FluxToggleGPS_Unchecked" />
+        </StackPanel>
+        <StackPanel Height="101" HorizontalAlignment="Left" Margin="21,169,0,0" Name="stackPane3" VerticalAlignment="Top" Width="447" Grid.Row="1">
+            <toolbox:ToggleSwitch x:Name="FluxToggleLock"
+                          Header="{Binding Path=LocalizedResources.modeLock, Source={StaticResource LocalizedStrings}}" 
+                          Checked="FluxToggleLock_Checked" 
+                          Unchecked="FluxToggleLock_Unchecked" />
+        </StackPanel>
+        <StackPanel Height="101" HorizontalAlignment="Left" Margin="24,380,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="447" Grid.Row="1">
+            <toolbox:ToggleSwitch x:Name="FluxToggle" Header="{Binding Path=LocalizedResources.modeTown, Source={StaticResource LocalizedStrings}}" Checked="FluxToggle_Checked" Unchecked="FluxToggle_Unchecked" />
+        </StackPanel>
+    </Grid>
+ 
+    <!--Exemple de code illustrant l'utilisation de l'ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Bouton 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Bouton 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="ÉlémentMenu 1"/>
+                <shell:ApplicationBarMenuItem Text="ÉlémentMenu 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

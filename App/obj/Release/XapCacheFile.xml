@@ -1,0 +1,27 @@
+﻿<xapCache source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Bin\Release\RunToScore.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="29/06/2012 23:11:44">
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="10/05/2012 01:06:55" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Background.png" archivePath="Background.png" lastWriteTime="09/05/2012 22:38:44" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="09/05/2012 22:38:43" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\obj\Release\RunToScore.dll" archivePath="RunToScore.dll" lastWriteTime="29/06/2012 23:11:41" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="29/08/2011 22:49:08" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="29/08/2011 22:49:08" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Toolkit\Oct11\Bin\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="06/10/2011 11:33:14" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ServiceModel.Syndication.dll" archivePath="System.ServiceModel.Syndication.dll" lastWriteTime="09/03/2011 23:08:16" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Xml.Serialization.dll" archivePath="System.Xml.Serialization.dll" lastWriteTime="09/03/2011 23:08:16" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\obj\Release\fr-FR\RunToScore.resources.dll" archivePath="fr-FR\RunToScore.resources.dll" lastWriteTime="29/06/2012 23:11:42" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.back.rest.png" archivePath="Images\appbar.back.rest.png" lastWriteTime="16/05/2012 12:04:48" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.delete.rest.png" archivePath="Images\appbar.delete.rest.png" lastWriteTime="16/05/2012 12:06:05" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.feature.email.rest.png" archivePath="Images\appbar.feature.email.rest.png" lastWriteTime="16/05/2012 12:06:27" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.transport.play.rest.png" archivePath="Images\appbar.transport.play.rest.png" lastWriteTime="06/05/2012 22:03:45" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\globe-icone-48.png" archivePath="Images\globe-icone-48.png" lastWriteTime="07/05/2012 14:08:37" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\medal-bronze-32.png" archivePath="Images\medal-bronze-32.png" lastWriteTime="07/05/2012 14:38:34" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\medal-gold-32.png" archivePath="Images\medal-gold-32.png" lastWriteTime="07/05/2012 14:38:34" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\medal-silver-32.png" archivePath="Images\medal-silver-32.png" lastWriteTime="07/05/2012 14:38:34" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="24/05/2012 19:42:14" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.feature.settings.rest.png" archivePath="Images\appbar.feature.settings.rest.png" lastWriteTime="06/05/2012 19:03:27" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.new.rest.png" archivePath="Images\appbar.new.rest.png" lastWriteTime="06/05/2012 19:09:40" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.questionmark.rest.png" archivePath="Images\appbar.questionmark.rest.png" lastWriteTime="06/05/2012 19:12:57" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Images\appbar.stop.rest.png" archivePath="Images\appbar.stop.rest.png" lastWriteTime="06/05/2012 19:09:40" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="09/05/2012 23:19:09" />
+  <file source="C:\Users\Timothée\Documents\Visual Studio 2010\Projects\RunToScore\RunToScore\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="24/05/2012 19:43:54" />
+</xapCache>

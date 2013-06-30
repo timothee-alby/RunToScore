@@ -1,0 +1,153 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="RunToScore.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+	<phone:PhoneApplicationPage.Resources>
+		<Style x:Key="TextBlockStyle1" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="32"/>
+		</Style>
+	</phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+        <!--Contrôle Panorama-->
+        <controls:Panorama Title="{Binding Path=LocalizedResources.appName, Source={StaticResource LocalizedStrings}}">
+            <!--<controls:Panorama.Background>
+                <ImageBrush ImageSource="PanoramaBackground.png"/>
+            </controls:Panorama.Background>-->
+ 
+            <!--Élément un de panorama-->
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.mainPanorama1, Source={StaticResource LocalizedStrings}}">
+                <StackPanel>
+                    <!--<TextBlock Height="130" HorizontalAlignment="Left" Name="noRunYet" Text="{Binding Path=LocalizedResources.noRunYet, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="419" Style="{StaticResource TextBlockStyle1}" />-->
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="points_before" Text="{Binding Path=LocalizedResources.points_before, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="points_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Name="points_unit" Text="pts" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" Foreground="{StaticResource PhoneAccentBrush}"  />
+                        <TextBlock Name="nbRun_before" Text="{Binding Path=LocalizedResources.nbRun_before, Source={StaticResource LocalizedStrings}}" Padding="10,0,0,0"  VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="nbRun_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Name="nbRun_unit" Text="{Binding Path=LocalizedResources.nbRun_unit, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" Foreground="{StaticResource PhoneAccentBrush}"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="distance_before" Text="{Binding Path=LocalizedResources.distance_before, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="distance_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Name="distance_unit" Text="km" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" Foreground="{StaticResource PhoneAccentBrush}"  />
+                       </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="duration_before" Text="{Binding Path=LocalizedResources.duration_before, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="duration_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="avgVitesse_before" Text="{Binding Path=LocalizedResources.avgVitesse_before, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="avgVitesse_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Name="avgVitesse_unit" Text="km/h" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" Foreground="{StaticResource PhoneAccentBrush}"  />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="kCal_before" Text="{Binding Path=LocalizedResources.kCal_before, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" />
+                        <TextBlock Name="kCal_val" Text="0" TextAlignment="Center" Style="{StaticResource TextBlockStyle1}" Padding="10,0,10,0" Foreground="{StaticResource PhoneAccentBrush}" />
+                        <TextBlock Name="kCal_unit" Text="kCal" VerticalAlignment="Top" Style="{StaticResource TextBlockStyle1}" Foreground="{StaticResource PhoneAccentBrush}"  />
+                    </StackPanel>
+                    <TextBlock Height="30" Name="textBlockDebug" Text="{Binding test}" />
+                    <Button Content="{Binding Path=LocalizedResources.newRun, Source={StaticResource LocalizedStrings}}" Height="150" Margin="0,0,0,0" HorizontalAlignment="Center" Name="newRun_button" Width="324"  Click="newRun_Click" Background="{StaticResource PhoneAccentBrush}"/>
+                    <!--<Image Height="217" Name="image1" Stretch="Fill" Width="252" Source="images/manRunning.jpg" Margin="0,50,0,0" />-->
+                    
+                </StackPanel>
+                <!--photo man running http://www.stocklib.fr/image_info.php?id=9037292&cid=vslp-->
+                
+                
+                        <!--Liste double trait avec habillage du texte-->
+                <!--<ListBox Margin="0,0,-12,0" ItemsSource="{Binding Items}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
+                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>-->
+            </controls:PanoramaItem>
+            
+ 
+            <!--Élément deux de panorama-->
+            <!--Utilisez 'Orientation="Horizontal"' pour activer un panneau qui s'affiche horizontalement-->
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.mainPanorama2, Source={StaticResource LocalizedStrings}}">
+                <!--Liste double trait avec espace réservé pour une image et habillage du texte-->
+                <ListBox Margin="0,0,-12,0" ItemsSource="{Binding}" Name="historyListBox" SelectionChanged="historyListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17" >
+                                <Grid>
+                                    <Rectangle Height="100" Width="100" Fill="{StaticResource PhoneAccentBrush}" Margin="12,0,9,0"/>
+                                    <TextBlock Height="50" Width="100" HorizontalAlignment="Left" TextAlignment="Center" Margin="12,0,0,0" Name="textBlockPoints1" Text="{Binding points}" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                                    <TextBlock Height="50" Width="100" Margin="12,50,0,0" HorizontalAlignment="Left" TextAlignment="Center" Name="textBlockPoints2" Text="Pts" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                                </Grid>
+                                <StackPanel Width="311">
+                                    <TextBlock Text="{Binding Path=dateFormated}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <StackPanel Orientation="Vertical">
+                                            <!--<StackPanel Orientation="Horizontal" Width="120">
+                                                <TextBlock Text="{Binding distance}" Name="distance" Margin="10,0,0,0" Foreground="#99FFFFFF"/>
+                                                <TextBlock Text="Km" Name="distance_unit" Margin="5,0,0,0" Foreground="#99FFFFFF"/>
+                                            </StackPanel>-->
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding durationFormated}" Name="duration" Margin="10,0,0,0"  Foreground="#999999" FontSize="40"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <!--<StackPanel Orientation="Vertical">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Denivelé :" Name="altitude_unit" Margin="5,0,0,0" Foreground="#99FFFFFF" />
+                                                <TextBlock Text="{Binding altitude}" Name="altitude" Margin="10,0,0,0" Foreground="#99FFFFFF"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding kcal}" Name="calories" Margin="10,0,0,0" Foreground="#99FFFFFF"/>
+                                                <TextBlock Text="Kcal" Name="calories_unit" Margin="5,0,0,0" Foreground="#99FFFFFF"/>
+                                            </StackPanel>
+                                        </StackPanel>-->
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                        
+                        <!--<DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
+                                <Rectangle Height="100" Width="100" Fill="#FFE5001b" Margin="12,0,9,0"/>
+                                <StackPanel Width="311">
+                                    <TextBlock Text="{Binding Path=dateFormated}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <TextBlock Text="{Binding Path=duration}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>-->
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+            <!--Élément trois de panorama-->
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.mainPanorama3, Source={StaticResource LocalizedStrings}}">
+                <TextBlock Name="textBlockRanking" Text="{Binding Path=LocalizedResources.textRankingWait, Source={StaticResource LocalizedStrings}}" Width="438" VerticalAlignment="Top" />
+
+            </controls:PanoramaItem>
+        </controls:Panorama>
+        </Grid>
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.questionmark.rest.png" Text="About" Click="about_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.feature.settings.rest.png" Text="Settings" Click="settings_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar.new.rest.png" Text="New Run" Click="newRun_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+</phone:PhoneApplicationPage>

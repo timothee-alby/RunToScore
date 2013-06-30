@@ -1,0 +1,76 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="RunToScore.History"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:carte="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.Resources>
+            <carte:ApplicationIdCredentialsProvider ApplicationId="Am1eKq3vy06AHytpB_ueTbHrhBtYKw4cMdQ8Hosk1QCQLD6knJ75ahoKQLwMhXMV" x:Key="pwd" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="{Binding Path=LocalizedResources.appName, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Name="fullRunDate" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+    
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <StackPanel Orientation="Horizontal" Margin="0,120,0,17" >
+            <TextBlock Name="fullRunPoints" Text="0" HorizontalAlignment="Left" Margin="21,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"  Foreground="{StaticResource PhoneAccentBrush}" />
+            <TextBlock Name="PageTitle3" Text="Points" HorizontalAlignment="Left"  Margin="15,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="{StaticResource PhoneAccentBrush}" />
+
+        </StackPanel>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid Margin="13,0,0,0">
+                <Rectangle Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"  Fill="{StaticResource PhoneAccentBrush}"/>
+                <TextBlock Name="fullRunDistance" Height="50" Width="100" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,0" Text="0" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                <TextBlock Height="50" Width="100" Margin="0,50,0,0" HorizontalAlignment="Left" TextAlignment="Center" Name="fullRunDistance_unit" Text="Km" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+            </Grid>
+            <Grid Margin="123,0,0,0">
+                <Rectangle Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"  Fill="{StaticResource PhoneAccentBrush}"/>
+                <TextBlock Name="fullRunTime" Height="50" Width="100" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,0" Text="0h00" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                <TextBlock Height="50" Width="100" Margin="0,50,0,0" HorizontalAlignment="Left" TextAlignment="Center" Name="fullRunTime_bottom" Text="00s" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+            </Grid>
+            <Grid Margin="233,0,0,0">
+                <Rectangle Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"  Fill="{StaticResource PhoneAccentBrush}"/>
+                <TextBlock Name="fullRunVitesse" Height="50" Width="100" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,0" Text="0" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                <TextBlock Height="50" Width="100" Margin="0,50,0,0" HorizontalAlignment="Left" TextAlignment="Center" Name="fullRunVitesse_unit" Text="m" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+            </Grid>
+            <Grid Margin="343,0,0,0">
+                <Rectangle Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"  Fill="{StaticResource PhoneAccentBrush}"/>
+                <TextBlock Name="fullRunKCal" Height="50" Width="100" HorizontalAlignment="Left" TextAlignment="Center" Margin="0,0,0,0" Text="0" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                <TextBlock Height="50" Width="100" Margin="0,50,0,0" HorizontalAlignment="Left" TextAlignment="Center" Name="textBlockKCal_unit" Text="Kcal" VerticalAlignment="Top" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+            </Grid>
+            <my:Map Height="495" HorizontalAlignment="Left" Margin="0,106,0,0" Name="map1" VerticalAlignment="Top" Width="456" CredentialsProvider="{StaticResource pwd}" />
+        </Grid>
+    </Grid>
+ 
+    <!--Exemple de code illustrant l'utilisation de l'ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Bouton 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Bouton 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="ÉlémentMenu 1"/>
+                <shell:ApplicationBarMenuItem Text="ÉlémentMenu 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
