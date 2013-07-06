@@ -6,7 +6,7 @@ RunToScore was a project made in 4 days to discover the C# language and the Wind
 
 The app is on the Windows Phone marketplace but need a maj to continue working. The maj is no planned. 
 
-More about me: [**timothee.alby.fr**]([**Timothée Alby**](http://timothee.alby.fr)
+More about me: [**timothee.alby.fr**](http://timothee.alby.fr)
 
 
 ##Description
@@ -23,7 +23,7 @@ Within the next update you will be able to update your scores on Facebook and in
 Start practice now, and have fun doing exercises :)
 
 ##Link
-[**RunToScore on the Windows Phone Marketplace**]([**RunToScore on the Windows Phone Marketplace**](http://latedev.com/iotaseries.com)
+[**RunToScore on the Windows Phone Marketplace**](http://www.windowsphone.com/en-us/store/app/runtoscore/ff5836de-9765-4562-baac-f31d545fd4f0)
 
 ##Screenshots
 ![Capture](http://cdn.marketplaceimages.windowsphone.com/v8/images/bad7e8ff-91a1-439d-8bb7-03780440376b?imageType=ws_screenshot_large&rotation=0)
