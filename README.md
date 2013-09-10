@@ -4,7 +4,7 @@ _Windows Phone application_
 
 RunToScore was a project made in 4 days to discover the C# language and the Windows Phone SDK.
 
-The app is on the Windows Phone marketplace but need a maj to continue working. The maj is no planned. 
+The app is on the Windows Phone marketplace but need an update to continue working (because of a Bing Maps API change). The update is no planned. 
 
 More about me: [**timothee.alby.fr**](http://timothee.alby.fr)
 
